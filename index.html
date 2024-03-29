@@ -1,0 +1,72 @@
+<html>
+<head>
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HEART DISEASE PREDICTION </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>• B R E A T H •</h1>
+        <p>KNOW YOUR HEALTH</p>
+        <nav>
+            <ul>
+               
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+                            <div class="center">
+                            <h2></h2>
+                             </div>
+            <p></p>
+        <form id="predictionForm" method="post" action="/predict">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            <div class="form-group">
+                <label for="sex">Sex: </label>
+                <select id="sex" name="sex" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <label for="cp">Chest Pain Type (0-3):</label>
+            <input type="number" id="cp" name="cp" required>
+            <label for="trestbps">Resting Blood Pressure (mm Hg):</label>
+            <input type="number" id="trestbps" name="trestbps" required>
+            <label for="chol">Serum Cholesterol (mg/dL):</label>
+            <input type="number" id="chol" name="chol" required>
+            <label for="fbs">Fasting Blood Sugar > 120 mg/dL (1 = true, 0 = false):</label>
+            <input type="number" id="fbs" name="fbs" required>
+            <label for="restecg">Resting Electrocardiographic Results (0-2):</label>
+            <input type="number" id="restecg" name="restecg" required>
+            <label for="thalach">Maximum Heart Rate Achieved:</label>
+            <input type="number" id="thalach" name="thalach" required>
+            <label for="exang">Exercise Induced Angina (1 = yes, 0 = no):</label>
+            <input type="number" id="exang" name="exang" required>
+            <label for="oldpeak">ST Depression Induced by Exercise Relative to Rest:</label>
+            <input type="number" id="oldpeak" name="oldpeak" step="0.01" required>
+            <label for="slope">Slope of the Peak Exercise ST Segment (0-2):</label>
+            <input type="number" id="slope" name="slope" required>
+            <label for="ca">Number of Major Vessels (0-3) Colored by Flourosopy:</label>
+            <input type="number" id="ca" name="ca" required>
+            <label for="thal">Thalassemia (0-3):</label>
+            <input type="number" id="thal" name="thal" required>
+            <button type="submit">Predict</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
